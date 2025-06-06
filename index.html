@@ -1,0 +1,1245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/output.css">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <style>
+        @keyframes marqueeScroll {
+            0% {
+                transform: translateX(0%);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="relative">
+        <div>
+            <div class="flex h-11 bg-[#fff2ef] justify-between items-center">
+                <div class="flex pl-8">
+                    <img src="./image/phone.svg" class="size-4 mr-3 ml-3 mt-1 text-xs"> 0812665001
+                    <img src="./image/email.svg" class="size-4 mr-3 ml-3 mt-[6px] text-xs"> maverickdress@gmail.com
+                </div>
+                <p class="mr-3 hidden md:block">
+                    Free Delivery on <strong class="font-bold ">orders</strong> over $260
+                </p>
+            </div>
+        </div>
+        <div class="flex px-1 py-1 h-20 justify-between">
+            <div class="flex items-center gap-[40px] mx-12">
+                <!-- Nút hamburger cho màn hình nhỏ -->
+                <button id="hamburger" class="md:hidden p-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+                <logo class="items-center">
+                    <img src="./image/logo.png" class="w-[180px]">
+                </logo>
+
+                <nav class="hidden md:flex flex-grow justify-center items-center space-x-10">
+                    <ul class="flex gap-10">
+                        <!-- Home -->
+                        <li>
+                            <a href="">Home</a>
+                        </li>
+                        <!-- Products -->
+                        <li class="group">
+                            <a href="#" class="text-gray-800 hover:text-blue-600 font-semibold">Products</a>
+                            <!-- Dropdown Menu -->
+                            <div
+                                class="absolute left-0 top-full hidden group-hover:flex w-screen bg-white p-6 space-x-10 z-20">
+                                <!-- Column 1 -->
+                                <div class="w-1/6 space-y-[30px]">
+                                    <h2 class="text-md font-bold">School Uniforms</h2>
+                                    <ul class="space-y-[30px] text-sm">
+                                        <li><a href="#" class="hover:text-blue-600">Shirts</a></li>
+                                        <li><a href="#" class="hover:text-blue-600">Skirts</a></li>
+                                        <li><a href="#" class="hover:text-blue-600">Frocks</a></li>
+                                        <li><a href="#" class="hover:text-blue-600">Trousers</a></li>
+                                        <li><a href="#" class="hover:text-blue-600">Blazers</a></li>
+                                        <li><a href="#" class="hover:text-blue-600">Winter Wear</a></li>
+                                        <li><a href="#" class="hover:text-blue-600">School Bags</a></li>
+                                        <li><a href="#" class="hover:text-blue-600">Shoes</a></li>
+                                    </ul>
+                                </div>
+                                <!-- Column 2 -->
+                                <div class="w-1/6 space-y-[30px]">
+                                    <h2 class="text-md font-bold">Sport Uniforms</h2>
+                                    <ul class="space-y-1 text-sm space-y-[30px]">
+                                        <li><a href="#" class="hover:text-blue-600">P.T T-shirts</a></li>
+                                        <li><a href="#" class="hover:text-blue-600">P.T. Shorts</a></li>
+                                        <li><a href="#" class="hover:text-blue-600">P.T. track pants</a></li>
+                                        <li><a href="#" class="hover:text-blue-600">Sports Shoes</a></li>
+                                        <li><a href="#" class="hover:text-blue-600">Swimming Costumes</a></li>
+                                        <li><a href="#" class="hover:text-blue-600">Sports Equipment</a></li>
+                                        <li><a href="#" class="hover:text-blue-600">Team Jerseys</a></li>
+                                        <li><a href="#" class="hover:text-blue-600">Sports Bags</a></li>
+                                    </ul>
+                                </div>
+                                <!-- Column 3 -->
+                                <div class="w-1/6 space-y-[30px]">
+                                    <h2 class="text-md font-bold">Accessories</h2>
+                                    <ul class="space-y-1 text-sm space-y-[30px]">
+                                        <li><a href="#" class="hover:text-blue-600">Belts</a></li>
+                                        <li><a href="#" class="hover:text-blue-600">Ties</a></li>
+                                        <li><a href="#" class="hover:text-blue-600">Logos</a></li>
+                                        <li><a href="#" class="hover:text-blue-600">Socks</a></li>
+                                        <li><a href="#" class="hover:text-blue-600">Hair Accessories</a></li>
+                                        <li><a href="#" class="hover:text-blue-600">Badges</a></li>
+                                        <li><a href="#" class="hover:text-blue-600">Water Bottles</a></li>
+                                        <li><a href="#" class="hover:text-blue-600">Stationery</a></li>
+                                    </ul>
+                                </div>
+                                <!-- Right picture -->
+                                <div class="w-3/6">
+                                    <div class="grid grid-cols-2 gap-1">
+                                        <figure class="w-full">
+                                            <a href=""><img src="./image/ads-1.webp"
+                                                    class="w-full h-auto object-cover" /></a>
+                                            <figcaption class="font-bold text-center">Featured</figcaption>
+                                        </figure>
+                                        <figure class="w-full">
+                                            <a href=""><img src="./image/ads-2.webp"
+                                                    class="w-full h-auto object-cover" /></a>
+                                            <figcaption class="font-bold text-center">New Arrivals</figcaption>
+                                        </figure>
+                                    </div>
+                                    <div class="grid grid-cols-2 gap-1">
+                                        <figure class="w-full">
+                                            <a href=""><img src="./image/ads-3.webp"
+                                                    class="w-full h-auto object-cover" /></a>
+                                            <figcaption class="font-bold text-center">Special Offers</figcaption>
+                                        </figure>
+                                        <figure class="w-full">
+                                            <a href=""><img src="./image/ads-4.webp"
+                                                    class="w-full h-auto object-cover" /></a>
+                                            <figcaption class="font-bold text-center">All Products</figcaption>
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- About -->
+                        <li class="relative group">
+                            <a href="#" class="flex items-center gap-1 font-semibold text-gray-800 hover:text-blue-600">
+                                About
+                                <img src="https://your-domain.com/assets/icon/arrow-bottom.svg" alt=""
+                                    class="w-3 h-3 mt-1" />
+                            </a>
+
+                            <!-- Dropdown menu -->
+                            <ul
+                                class="absolute left-0 mt-2 w-56 bg-white rounded-md shadow-lg hidden group-hover:block z-50">
+                                <li><a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">About Us</a></li>
+                                <li><a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">Careers</a></li>
+                                <li><a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">Partners</a></li>
+                                <li><a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">Growth &
+                                        Achievement</a>
+                                </li>
+                                <li><a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">Awards &
+                                        Recognition</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- Support -->
+                        <li class="relative group">
+                            <a href="#" class="flex items-center gap-1 font-semibold text-gray-800 hover:text-blue-600">
+                                Support
+                                <img src="https://your-domain.com/assets/icon/arrow-bottom.svg" alt=""
+                                    class="w-3 h-3 transition-transform duration-200 group-hover:rotate-180" />
+                            </a>
+
+                            <!-- Dropdown menu -->
+                            <ul
+                                class="absolute left-0 mt-2 w-56 bg-white rounded-md shadow-lg hidden group-hover:block z-50">
+                                <li><a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">FAQ</a></li>
+                                <li><a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">Policies</a></li>
+                                <li><a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">Contact Us</a></li>
+                                <li><a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">Order Tracking</a>
+                                </li>
+                                <li><a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">Size Guide</a></li>
+                                <li><a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">Sitemap</a></li>
+                            </ul>
+                        </li>
+                        <!-- Media -->
+                        <li class="relative group">
+                            <a href="#" class="flex items-center gap-1 font-semibold text-gray-800 hover:text-blue-600">
+                                Media
+                                <img src="https://your-domain.com/assets/icon/arrow-bottom.svg" alt=""
+                                    class="w-3 h-3 mt-1" />
+                            </a>
+
+                            <!-- Dropdown Level 1 -->
+                            <ul class="container absolute left-0 mt-2 w-56 bg-white hidden group-hover:block z-50">
+
+                                <!-- Gallery with submenu -->
+                                <li class="relative group">
+                                    <a href="#"
+                                        class="flex justify-between items-center px-4 py-2 text-sm hover:bg-gray-100">
+                                        <span>Gallery</span>
+                                        <img src="https://your-domain.com/assets/icon/cheveron-right.svg" alt=""
+                                            class="w-3 h-3" />
+                                    </a>
+
+                                    <!-- Dropdown Level 2 -->
+                                    <ul
+                                        class="absolute top-0 left-full ml-1 w-56 bg-white border rounded-md shadow-lg hidden group-hover/gallery:block z-50">
+                                        <li><a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">Product
+                                                Photos</a>
+                                        </li>
+                                        <li><a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">School
+                                                Events</a>
+                                        </li>
+                                        <li><a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">Sports
+                                                Events</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <!-- Other items -->
+                                <li><a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">News</a></li>
+                                <li><a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">Fashion News</a></li>
+                                <li><a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">Trends</a></li>
+                            </ul>
+                        </li>
+                        <!-- Activities -->
+                        <li class="relative group">
+                            <a href="#" class="flex items-center gap-1 font-semibold text-gray-800 hover:text-blue-600">
+                                Activities
+                                <img src="https://your-domain.com/assets/icon/arrow-bottom.svg" alt=""
+                                    class="w-3 h-3 mt-1" />
+                            </a>
+
+                            <!-- Dropdown menu -->
+                            <ul
+                                class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg hidden group-hover:block z-50">
+                                <li><a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">Wishlist</a></li>
+                                <li><a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">Coupons</a></li>
+                                <li><a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">Recently Products</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- Search / Heart / Cart / Counter -->
+            <div class="flex gap-6 mr-5 items-center sm:gap-4 sm:mr-2">
+                <!-- Search -->
+                <button class="p-1">
+                    <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/search.svg" alt="Search"
+                        class="w-5 h-5 sm:w-4 sm:h-4" />
+                </button>
+                <!-- Heart -->
+                <button class="relative p-1">
+                    <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/heart.svg"
+                        class="w-5 h-5 sm:w-4 sm:h-4" />
+                    <span
+                        class="absolute border rounded-full size-5 sm:size-4 flex items-center justify-center bg-black text-white text-xs bottom-5 sm:bottom-4 left-2">0</span>
+                </button>
+                <!-- Cart -->
+                <button class="relative p-1">
+                    <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/cart.svg"
+                        class="w-5 h-5 sm:w-4 sm:h-4" />
+                    <span
+                        class="absolute border rounded-full size-5 sm:size-4 flex items-center justify-center bg-black text-white text-xs bottom-5 sm:bottom-4 left-2">0</span>
+                </button>
+                <!-- User & loading -->
+                <button class="flex items-center gap-1 mt-1 sm:mt-0">
+                    <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/person.svg"
+                        class="w-6 h-6 sm:w-5 sm:h-5" />
+                    <img src="./image/loading.gif" class="size-5 sm:size-4">
+                </button>
+            </div>
+
+        </div>
+    </header>
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const menu = document.getElementById('main-menu');
+
+        hamburger.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+    <!-- Slider -->
+    <section class="relative overflow-hidden" id="slider">
+        <!-- Slide Container -->
+        <div class="relative w-full h-screen">
+            <!-- Slides -->
+            <div class="absolute inset-0 transition-opacity duration-1000 opacity-100 slide active"
+                style="background-image: url('./image/background-1.jpg'); background-size: cover; background-position: center;">
+                <div class="relative z-10 container mx-auto h-full flex flex-col justify-center items-start px-6">
+                    <h1 class="text-6xl font-bold mb-4 max-w-xl">
+                        The Largest School Uniform Supplier in the Country
+                    </h1>
+                    <p class="text-lg md:text-xl mb-6">
+                        We prioritize user experience and provide the best uniform solutions for students.
+                    </p>
+                    <a href=""
+                        class="inline-flex items-center gap-2 bg-black text-white px-6 py-3 rounded-lg hover:bg-blue-500 transition">
+                        Shop Now
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <g transform="rotate(180 12 12)">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 7l-10 10m0 0h10m-10 0V7" />
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="absolute inset-0 transition-opacity duration-1000 opacity-0 slide"
+                style="background-image: url('./image/background-2.jpg'); background-size: cover; background-position: center;">
+                <div
+                    class="relative z-10 container mx-auto h-full flex flex-col justify-center items-start px-6 md:px-12">
+                    <h1 class="text-6xl font-bold mb-4">
+                        Explore Our Latest Collection
+                    </h1>
+                    <p class="text-lg md:text-xl mb-6 ">
+                        Stylish and comfortable uniforms designed for students.
+                    </p>
+                    <a href=""
+                        class="inline-flex items-center gap-2 bg-black text-white px-6 py-3 rounded-lg hover:bg-blue-500 transition">
+                        Shop Now
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <g transform="rotate(180 12 12)">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 7l-10 10m0 0h10m-10 0V7" />
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 3 banner -->
+    <section class="py-12 bg-white">
+        <div class="mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Item 1 -->
+            <a href="" class="block group relative overflow-hidden rounded-lg shadow-lg">
+                <img src="./image/banner-1.png"
+                    class="group-hover:scale-105 bg-center bg-cover transition-transform duration-300">
+                <div class="absolute inset-0 flex flex-col justify-center items-start px-6">
+                    <p class="text-sm font-medium uppercase tracking-widest">Top Collections</p>
+                    <h2 class="text-3xl font-bold mt-2">Top Trends Style</h2>
+                    <span class="mt-4 inline-block text-sm font-semibold underline">Shop Now</span>
+                </div>
+            </a>
+
+            <!-- Item 2 -->
+            <a href="" class="block group relative overflow-hidden rounded-lg shadow-lg">
+                <img src="./image/banner-2.png"
+                    class="group-hover:scale-105 bg-center bg-cover transition-transform duration-300">
+                <div class="absolute inset-0 flex flex-col justify-center items-start px-6">
+                    <p class="text-sm font-medium uppercase tracking-widest">Premium Style</p>
+                    <h2 class="text-3xl font-bold mt-2">Here Your Look</h2>
+                    <span class="mt-4 inline-block text-sm font-semibold underline">Shop Now</span>
+                </div>
+            </a>
+
+            <!-- Item 3 -->
+            <a href="/categories" class="block group relative overflow-hidden rounded-lg shadow-lg">
+                <img src="./image/banner-3.png"
+                    class="group-hover:scale-105 bg-center bg-cover transition-transform duration-300">
+                <div class="absolute inset-0 flex flex-col justify-center items-start px-6">
+                    <p class="text-sm font-medium uppercase tracking-widest">Exclusive Sale</p>
+                    <h2 class="text-3xl font-bold mt-2">Up to 50% Off</h2>
+                    <span class="mt-4 inline-block text-sm font-semibold underline">Shop Now</span>
+                </div>
+            </a>
+        </div>
+    </section>
+    <!-- Featured Products -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <!-- Section Header -->
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800">Featured Products</h2>
+                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
+                    Discover our premium school uniforms - Crafted with care and designed for comfort, our collection
+                    features
+                    high-quality materials and timeless styles.
+                </p>
+            </div>
+            <!-- Product Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <!-- Product Card (Repeat for each product) -->
+                <article class="rounded-lg shadow">
+                    <figure class="relative">
+                        <!-- Sale Badge -->
+                        <span
+                            class="absolute top-3 left-3 bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded z-10">
+                            30% OFF
+                        </span>
+                        <!-- Product Image -->
+                        <div class="overflow-hidden">
+                            <a href="" class="block hover:scale-110 transition-transform duration-300">
+                                <img src="./image/product-1.webp" alt="Product Name"
+                                    class="w-full h-[250px] object-cover" />
+                            </a>
+                        </div>
+                        <!-- Heart -->
+                        <div class="absolute top-[170px] right-3">
+                            <button class="bg-white rounded-full p-2 shadow hover:bg-black transition">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-black hover:text-white   "
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 21.364 4.318 12.682a4.5 4.5 0 010-6.364z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </figure>
+                    <!-- Product Info -->
+                    <div class="p-4 text-center">
+                        <!-- Rating -->
+                        <div class="flex items-center gap-1 text-yellow-400 text-sm mb-1 justify-center">
+                            <span>★★★★☆</span>
+                            <span class="text-gray-500 text-xs">(4.5)</span>
+                        </div>
+                        <!-- Product Name -->
+                        <h3 class="text-[16px] font-semibold text-gray-800">
+                            <a href="/product/example-product" class="hover:text-blue-600 transition">
+                                Boys Tie Kids Ties, Adjustable Pre-Tied Tie for Boys Girls Zipper Neckties for School
+                                Uniform Graduation Wedding Party
+                            </a>
+                        </h3>
+                        <!-- Price -->
+                        <p class="mt-2 text-red-500 font-semibold">
+                            $14.00
+                            <span class="ml-2 text-gray-400 line-through text-sm font-normal">$20.00</span>
+                        </p>
+                    </div>
+                </article>
+                <article class="rounded-lg shadow">
+                    <figure class="relative">
+                        <!-- Sale Badge -->
+                        <span
+                            class="absolute top-3 left-3 bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded z-10">
+                            25% OFF
+                        </span>
+                        <!-- Product Image -->
+                        <div class="overflow-hidden">
+                            <a href="" class="block hover:scale-110 transition-transform duration-300">
+                                <img src="./image/product-2.webp" alt="Product Name"
+                                    class="w-full h-[250px] object-cover" />
+                            </a>
+                        </div>
+                        <!-- Heart -->
+                        <div class="absolute top-[170px] right-3">
+                            <button class="bg-white rounded-full p-2 shadow hover:bg-black transition">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-black hover:text-white   "
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 21.364 4.318 12.682a4.5 4.5 0 010-6.364z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </figure>
+                    <!-- Product Info -->
+                    <div class="p-4 text-center">
+                        <!-- Rating -->
+                        <div class="flex items-center gap-1 text-yellow-400 text-sm mb-1 justify-center">
+                            <span>★★★★☆</span>
+                            <span class="text-gray-500 text-xs">(4.5)</span>
+                        </div>
+                        <!-- Product Name -->
+                        <h3 class="text-[16px] font-semibold text-gray-800">
+                            <a href="/product/example-product" class="hover:text-blue-600 transition">
+                                Nautica Boys' School Uniform Performance Short
+                            </a>
+                        </h3>
+                        <!-- Price -->
+                        <p class="mt-2 text-red-500 font-semibold">
+                            $27.50
+                            <span class="ml-2 text-gray-400 line-through text-sm font-normal">$37.00</span>
+                        </p>
+                    </div>
+                </article>
+                <article class="rounded-lg shadow">
+                    <figure class="relative">
+                        <!-- Sale Badge -->
+                        <span
+                            class="absolute top-3 left-3 bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded z-10">
+                            30% OFF
+                        </span>
+                        <!-- Product Image -->
+                        <div class="overflow-hidden">
+                            <a href="" class="block hover:scale-110 transition-transform duration-300">
+                                <img src="./image/product-3.webp" alt="Product Name"
+                                    class="w-full h-[250px] object-cover" />
+                            </a>
+                        </div>
+                        <!-- Heart -->
+                        <div class="absolute top-[170px] right-3">
+                            <button class="bg-white rounded-full p-2 shadow hover:bg-black transition">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-black hover:text-white   "
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 21.364 4.318 12.682a4.5 4.5 0 010-6.364z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </figure>
+                    <!-- Product Info -->
+                    <div class="p-4 text-center">
+                        <!-- Rating -->
+                        <div class="flex items-center gap-1 text-yellow-400 text-sm mb-1 justify-center">
+                            <span>★★★★☆</span>
+                            <span class="text-gray-500 text-xs">(4.5)</span>
+                        </div>
+                        <!-- Product Name -->
+                        <h3 class="text-[16px] font-semibold text-gray-800">
+                            <a href="/product/example-product" class="hover:text-blue-600 transition">
+                                Wonder Nation Girls School Uniform Layered Look Dress, Sizes 4-16
+                            </a>
+                        </h3>
+                        <!-- Price -->
+                        <p class="mt-2 text-red-500 font-semibold">
+                            $7.48
+                            <span class="ml-2 text-gray-400 line-through text-sm font-normal">$9</span>
+                        </p>
+                    </div>
+                </article>
+                <article class="rounded-lg shadow">
+                    <figure class="relative">
+                        <!-- Sale Badge -->
+                        <span
+                            class="absolute top-3 left-3 bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded z-10">
+                            30% OFF
+                        </span>
+                        <!-- Product Image -->
+                        <div class="overflow-hidden">
+                            <a href="" class="block hover:scale-110 transition-transform duration-300">
+                                <img src="./image/product-4.webp" alt="Product Name"
+                                    class="w-full h-[250px] object-cover" />
+                            </a>
+                        </div>
+                        <!-- Heart -->
+                        <div class="absolute top-[170px] right-3">
+                            <button class="bg-white rounded-full p-2 shadow hover:bg-black transition">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-black hover:text-white   "
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 21.364 4.318 12.682a4.5 4.5 0 010-6.364z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </figure>
+                    <!-- Product Info -->
+                    <div class="p-4 text-center">
+                        <!-- Rating -->
+                        <div class="flex items-center gap-1 text-yellow-400 text-sm mb-1 justify-center">
+                            <span>★★★★☆</span>
+                            <span class="text-gray-500 text-xs">(4.5)</span>
+                        </div>
+                        <!-- Product Name -->
+                        <h3 class="text-[16px] font-semibold text-gray-800">
+                            <a href="/product/example-product" class="hover:text-blue-600 transition">
+                                Womens Girls Pleated Tennis Skirts High Waisted A-line Skirt School Uniform Athletic
+                                Golf Skorts with Shorts,2T-4XL
+                            </a>
+                        </h3>
+                        <!-- Price -->
+                        <p class="mt-2 text-red-500 font-semibold">
+                            $19.99
+                            <span class="ml-2 text-gray-400 line-through text-sm font-normal">$31</span>
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+    <!-- Dong chay ngang -->
+    <section class="overflow-hidden py-4">
+        <div class="whitespace-nowrap overflow-hidden relative">
+            <div class="flex gap-8 animate-marquee" style="animation: marqueeScroll 7s linear infinite;">
+                <div class="flex gap-8">
+                    <div class="flex items-center gap-2 min-w-max">
+                        <img src="./image/start.svg" alt="Icon" class="w-5 h-5" />
+                        <p class="text-sm text-gray-700 font-medium">
+                            FREE DELIVERY FOR ORDER OVER $120
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-2 min-w-max">
+                        <img src="./image/start.svg" alt="Icon" class="w-5 h-5" />
+                        <p class="text-sm text-gray-700 font-medium">
+                            SIGN UP & GET 10% OFF YOUR FIRST ORDER!
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-2 min-w-max">
+                        <img src="./image/start.svg" alt="Icon" class="w-5 h-5" />
+                        <p class="text-sm text-gray-700 font-medium">
+                            LIMITED TIME: 50% OFF ON SELECTED ITEMS!
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-2 min-w-max">
+                        <img src="./image/start.svg" alt="Icon" class="w-5 h-5" />
+                        <p class="text-sm text-gray-700 font-medium">
+                            BUY NOW, PAY LATER WITH EASY INSTALLMENTS
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-2 min-w-max">
+                        <img src="./image/start.svg" alt="Icon" class="w-5 h-5" />
+                        <p class="text-sm text-gray-700 font-medium">
+                            EXCLUSIVE MEMBER DEALS - SIGN UP FOR VIP OFFERS
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-2 min-w-max">
+                        <img src="./image/start.svg" alt="Icon" class="w-5 h-5" />
+                        <p class="text-sm text-gray-700 font-medium">
+                            NEW COLLECTIONS ARRIVING EVERY WEEK!
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-2 min-w-max">
+                        <img src="./image/start.svg" alt="Icon" class="w-5 h-5" />
+                        <p class="text-sm text-gray-700 font-medium">
+                            FREE GIFT WITH ORDERS OVER $200!
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Best Sales -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <!-- Section Header -->
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800">Best Sales</h2>
+                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
+                    Our top-performing products based on total sales and revenue. These items showcase the best in terms
+                    of sales volume and revenue generation within our school uniform collection.
+                </p>
+            </div>
+
+            <!-- Grid Layout -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                <!-- Product Card -->
+                <article class="flex rounded-lg overflow-hidden shadow relative">
+                    <!-- Product Image + Sale Badge -->
+                    <div class="relative">
+                        <a class="block overflow-hidden rounded">
+                            <div class="transition-transform duration-300 hover:scale-110">
+                                <img src="./image/BestSale-1.webp" alt="Product" class="size-[200px] object-cover " />
+                            </div>
+                        </a>
+                        <!-- Sale Badge -->
+                        <span
+                            class="absolute top-3 left-3 bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded">
+                            SALE 30%
+                        </span>
+                    </div>
+                    <!-- Product Info -->
+                    <div class="p-4 space-y-2">
+                        <!-- Product Name -->
+                        <h3 class="text-lg font-semibold text-gray-800 line-clamp-2">
+                            <a href="" class="hover:text-blue-600 transition">
+                                Short-Sleeve Oxford Shirt for Boys
+                            </a>
+                        </h3>
+                        <!-- Rating -->
+                        <div class="flex items-center text-yellow-400 text-sm gap-1">
+                            <!-- Static rating stars -->
+                            <span>★★★★☆</span>
+                            <span class="text-gray-500 text-xs">(4.8)</span>
+                        </div>
+                        <!-- Sales Info -->
+                        <div class="flex items-center text-sm font-bold">
+                            <span>2,154 purchases</span>
+                            <svg class="size-4" focusable="false" aria-hidden="true" viewBox="0 0 24 24"
+                                data-testid="TrendingUpIcon">
+                                <path d="m16 6 2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z">
+                                </path>
+                            </svg>
+                        </div>
+                        <!-- Price -->
+                        <p class="text-base font-semibold text-red-500">
+                            $25.00
+                            <span class="ml-2 text-sm line-through text-gray-400">$29.00</span>
+                        </p>
+                    </div>
+                </article>
+                <article class="flex rounded-lg overflow-hidden shadow relative">
+                    <!-- Product Image + Sale Badge -->
+                    <div class="relative">
+                        <a class="block overflow-hidden rounded">
+                            <div class="transition-transform duration-300 hover:scale-110">
+                                <img src="./image/BestSale-2.webp" alt="Product" class="size-[200px] object-cover" />
+                            </div>
+                        </a>
+                        <!-- Sale Badge -->
+                        <span
+                            class="absolute top-3 left-3 bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded">
+                            SALE 30%
+                        </span>
+                    </div>
+                    <!-- Product Info -->
+                    <div class="p-4 space-y-2">
+                        <!-- Product Name -->
+                        <h3 class="text-lg font-semibold text-gray-800 line-clamp-2">
+                            <a href="" class="hover:text-blue-600 transition">
+                                Short-Sleeve Oxford Shirt for Boys
+                            </a>
+                        </h3>
+                        <!-- Rating -->
+                        <div class="flex items-center text-yellow-400 text-sm gap-1">
+                            <!-- Static rating stars -->
+                            <span>★★★★☆</span>
+                            <span class="text-gray-500 text-xs">(4.8)</span>
+                        </div>
+                        <!-- Sales Info -->
+                        <div class="flex items-center text-sm font-bold">
+                            <span>2,154 purchases</span>
+                            <svg class="size-4" focusable="false" aria-hidden="true" viewBox="0 0 24 24"
+                                data-testid="TrendingUpIcon">
+                                <path d="m16 6 2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z">
+                                </path>
+                            </svg>
+                        </div>
+                        <!-- Price -->
+                        <p class="text-base font-semibold text-red-500">
+                            $25.00
+                            <span class="ml-2 text-sm line-through text-gray-400">$29.00</span>
+                        </p>
+                    </div>
+                </article>
+                <article class="flex rounded-lg overflow-hidden shadow relative">
+                    <!-- Product Image + Sale Badge -->
+                    <div class="relative">
+                        <a class="block overflow-hidden rounded">
+                            <div class="transition-transform duration-300 hover:scale-110">
+                                <img src="./image/BestSale-3.webp" alt="Product" class="size-[200px] object-cover" />
+                            </div>
+                        </a>
+                        <!-- Sale Badge -->
+                        <span
+                            class="absolute top-3 left-3 bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded">
+                            SALE 30%
+                        </span>
+                    </div>
+                    <!-- Product Info -->
+                    <div class="p-4 space-y-2">
+                        <!-- Product Name -->
+                        <h3 class="text-lg font-semibold text-gray-800 line-clamp-2">
+                            <a href="" class="hover:text-blue-600 transition">
+                                Short-Sleeve Oxford Shirt for Boys
+                            </a>
+                        </h3>
+                        <!-- Rating -->
+                        <div class="flex items-center text-yellow-400 text-sm gap-1">
+                            <!-- Static rating stars -->
+                            <span>★★★★☆</span>
+                            <span class="text-gray-500 text-xs">(4.8)</span>
+                        </div>
+                        <!-- Sales Info -->
+                        <div class="flex items-center text-sm font-bold">
+                            <span>2,154 purchases</span>
+                            <svg class="size-4" focusable="false" aria-hidden="true" viewBox="0 0 24 24"
+                                data-testid="TrendingUpIcon">
+                                <path d="m16 6 2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z">
+                                </path>
+                            </svg>
+                        </div>
+                        <!-- Price -->
+                        <p class="text-base font-semibold text-red-500">
+                            $25.00
+                            <span class="ml-2 text-sm line-through text-gray-400">$29.00</span>
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+    <!-- Logo thuong hieu -->
+    <section class="py-8 bg-white ">
+        <div class="px-4 shadow">
+            <ul class="flex flex-wrap justify-center items-center gap-12">
+                <li class="flex items-center justify-center w-32 h-20">
+                    <img src="/./image/Fila.webp" alt="Brand Name 1" class="max-h-full max-w-full object-contain" />
+                </li>
+
+                <li class="flex items-center justify-center w-32 h-20">
+                    <img src="./image/Ritter.webp" alt="Brand Name 2" class="max-h-full max-w-full object-contain" />
+                </li>
+
+                <li class="flex items-center justify-center w-32 h-20">
+                    <img src="./image/Nike.webp" alt="Brand Name 3" class="max-h-full max-w-full object-contain" />
+                </li>
+                <li class="flex items-center justify-center w-32 h-20">
+                    <img src="./image/adidas.webp" alt="Brand Name 3" class="max-h-full max-w-full object-contain" />
+                </li>
+                <li class="flex items-center justify-center w-32 h-20">
+                    <img src="./image/Newholand.webp" alt="Brand Name 3" class="max-h-full max-w-full object-contain" />
+                </li>
+                <li class="flex items-center justify-center w-32 h-20">
+                    <img src="./image/puma.webp" alt="Brand Name 3" class="max-h-full max-w-full object-contain" />
+                </li>
+
+            </ul>
+        </div>
+    </section>
+    <!-- Video -->
+    <section class="py-10 bg-white h-[500px]">
+        <div class="px-4">
+            <div class="flex flex-col lg:flex-row items-center gap-12 h-[500px]">
+                <!-- Video -->
+                <iframe width="60%" height="100%" src="https://www.youtube.com/embed/aPAp0h9FD1w?autoplay=1"
+                        title="YouTube video player" frameBorder="0"
+                        allowFullScreen>
+                </iframe>
+                <!-- Content -->
+                <div>
+                    <h2 class="text-5xl font-semibold text-gray-900 mb-4">Discover Our Product</h2>
+                    <a href="https://www.youtube.com/@MOMOGIRLFASHION" target="_blank" rel="noreferrer"
+                        class="inline-flex items-center mt-4">
+                        FOLLOW US ON YOUTUBE
+                        <img src="./image/youtube.svg" alt="YouTube Icon" class="w-6 h-6 ml-1" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonial -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-900">Testimonial</h2>
+                <p class="text-gray-600 mt-2">
+                    Read customer testimonials sharing how our school uniforms combine comfort, style, and durability
+                    for everyday wear.
+                </p>
+            </div>
+            <!-- Swiper -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide bg-gray-100 rounded-lg shadow p-6 text-center">
+                        <img src="./image/avarta-1.webp" alt="Alice" class="w-24 h-24 rounded-full mx-auto mb-4" />
+                        <p class="font-semibold text-lg text-gray-800">Alice</p>
+                        <p class="text-sm text-gray-500 mb-2">Parent</p>
+                        <div class="flex justify-center text-yellow-400 mb-3">
+                            ★★★★☆
+                        </div>
+                        <p>My child loves the comfort. Highly recommend!</p>
+                        <p>April 2025</p>
+                    </div>
+                    <div class="swiper-slide bg-gray-100 rounded-lg shadow p-6 text-center">
+                        <img src="./image/avarta-1.webp" alt="Alice" class="w-24 h-24 rounded-full mx-auto mb-4" />
+                        <p class="font-semibold text-lg text-gray-800">Alice</p>
+                        <p class="text-sm text-gray-500 mb-2">Parent</p>
+                        <div class="flex justify-center text-yellow-400 mb-3">
+                            ★★★★☆
+                        </div>
+                        <p>My child loves the comfort. Highly recommend!</p>
+                        <p>April 2025</p>
+                    </div>
+                    <div class="swiper-slide bg-gray-100 rounded-lg shadow p-6 text-center">
+                        <img src="./image/avarta-1.webp" alt="Alice" class="w-24 h-24 rounded-full mx-auto mb-4" />
+                        <p class="font-semibold text-lg text-gray-800">Alice</p>
+                        <p class="text-sm text-gray-500 mb-2">Parent</p>
+                        <div class="flex justify-center text-yellow-400 mb-3">
+                            ★★★★☆
+                        </div>
+                        <p>My child loves the comfort. Highly recommend!</p>
+                        <p>April 2025</p>
+                    </div>
+                    <div class="swiper-slide bg-gray-100 rounded-lg shadow p-6 text-center">
+                        <img src="./image/avarta-1.webp" alt="Alice" class="w-24 h-24 rounded-full mx-auto mb-4" />
+                        <p class="font-semibold text-lg text-gray-800">Alice</p>
+                        <p class="text-sm text-gray-500 mb-2">Parent</p>
+                        <div class="flex justify-center text-yellow-400 mb-3">
+                            ★★★★☆
+                        </div>
+                        <p>My child loves the comfort. Highly recommend!</p>
+                        <p>April 2025</p>
+                    </div>
+                </div>
+
+                <!-- Swiper controls -->
+                <div class="swiper-pagination mt-6"></div>
+                <div class="swiper-button-prev text-gray-600"></div>
+                <div class="swiper-button-next text-gray-600"></div>
+            </div>
+        </div>
+    </section>
+    <!-- News Post -->
+    <section class="py-16 bg-white">
+        <div class=" px-4 sm:px-6 lg:px-8">
+            <!-- Section Title -->
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800">News Posts</h2>
+                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
+                    Explore our latest blog posts for helpful tips, trends, and insights on school uniforms, fashion,
+                    and more!
+                </p>
+            </div>
+            <!-- Blog Grid -->
+            <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                <article class="overflow-hidden">
+                    <figure class="w-full h-[300px] overflow-hidden">
+                        <a href="">
+                            <img src="./image/blog-1.webp" alt="Post title 1"
+                                class="w-full h-full object-cover rounded-xl transition-transform duration-300 hover:scale-110" />
+                        </a>
+                    </figure>
+                    <div class="pt-4">
+                        <h3 class="text-2xl font-bold mb-4">
+                            <a>The Evolution of Uniform Design: Trends for 2025</a>
+                        </h3>
+                        <a class="inline-flex items-center font-medium border p-4 rounded-xl ">
+                            Read more
+                            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3">
+                                </path>
+                            </svg>
+                        </a>
+
+                    </div>
+                </article>
+                <article class="overflow-hidden">
+                    <figure class="w-full h-[300px] overflow-hidden">
+                        <a href="">
+                            <img src="./image/blog-2.webp" alt="Post title 1"
+                                class="w-full h-full object-cover rounded-xl transition-transform duration-300 hover:scale-110" />
+                        </a>
+                    </figure>
+                    <div class="pt-4">
+                        <h3 class="text-2xl font-bold mb-4">
+                            <a>The Role of Uniforms in Corporate Identity</a>
+                        </h3>
+                        <a class="inline-flex items-center font-medium border p-4 rounded-xl ">
+                            Read more
+                            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+                <article class="overflow-hidden">
+                    <figure class="w-full h-[300px] overflow-hidden">
+                        <a href="">
+                            <img src="./image/blog-3.webp" alt="Post title 1"
+                                class="w-full h-full object-cover rounded-xl transition-transform duration-300 hover:scale-110" />
+                        </a>
+                    </figure>
+                    <div class="pt-4">
+                        <h3 class="text-2xl font-bold mb-4">
+                            <a>Innovations in Uniform Technology</a>
+                        </h3>
+                        <a class="inline-flex items-center font-medium border p-4 rounded-xl ">
+                            Read more
+                            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+    <!-- jQuery + Slick JS (slider)-->
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('#slider .slide');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('opacity-100', 'opacity-0', 'active');
+                slide.classList.add('opacity-0');
+            });
+            slides[index].classList.add('opacity-100', 'active');
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            showSlide(currentSlide);
+        }
+
+        setInterval(nextSlide, 3000); // change every 3 seconds
+    </script>
+    <!-- Swiper JS(carousel) -->
+    <script>
+        const swiper = new Swiper(".mySwiper", {
+            loop: true,
+            spaceBetween: 30,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                },
+                1280: {
+                    slidesPerView: 3,
+                },
+            },
+        });
+    </script>
+    <script type="module">
+        import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs';
+
+        const swiper = new Swiper('.mySwiper', {
+            loop: true,
+            slidesPerView: 3,
+            spaceBetween: 20,
+            autoplay: {
+                delay: 3000,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                renderBullet: function (index, className) {
+                    return `<span class="${className} w-3 h-3 mx-1 rounded-full bg-gray-400 opacity-60"></span>`;
+                },
+            },
+        });
+    </script>
+</body>
+<footer class="bg-[#333333] text-white pt-12">
+    <div class="px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pb-12">
+            <!-- Company Information -->
+            <div>
+                <h3 class=" font-semibold mb-4">Company Information</h3>
+                <address class="flex items-start mb-3 text-gray-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-map-pin" style="margin-right: 8px;">
+                        <path
+                            d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0">
+                        </path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <a href="https://maps.google.com/?q=21.0285,105.8542">70 Washington Square, New York, NY 10012,
+                        USA</a>
+                </address>
+                <address class="flex items-start mb-3 text-gray-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-map-pin" style="margin-right: 8px;">
+                        <path
+                            d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0">
+                        </path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <a href="https://maps.google.com/?q=21.0285,105.8542">150 Montague St, Brooklyn, NY 11201, USA</a>
+                </address>
+                <address class="flex items-start mb-3 text-gray-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-map-pin" style="margin-right: 8px;">
+                        <path
+                            d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0">
+                        </path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <a href="https://maps.google.com/?q=21.0285,105.8542">350 5th Ave, New York, NY 10118, USA</a>
+                </address>
+                <mail class="flex items-center text-sm text-gray-300 mb-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-mail">
+                        <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                    </svg>
+                    <p class="ml-2">Email: </p>
+                    <a href="mailto:info@yourcompany.com" class="ml-2">maverickdresses@gmail.com</a>
+                </mail>
+                <phone class="flex items-center text-sm text-gray-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-phone">
+                        <path
+                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                        </path>
+                    </svg>
+                    <p class="ml-2">Phone: </p>
+                    <a href="tel:+84123456789" class="ml-2">+84 123 456 789</a>
+                </phone>
+            </div>
+            <!-- Quick Links -->
+            <div class="pl-20">
+                <h3 class="font-semibold mb-4">Quick Links</h3>
+                <ul class="space-y-6 text-sm text-gray-300">
+                    <li class="flex gap-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-file-text">
+                            <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path>
+                            <path d="M14 2v4a2 2 0 0 0 2 2h4"></path>
+                            <path d="M10 9H8"></path>
+                            <path d="M16 13H8"></path>
+                            <path d="M16 17H8"></path>
+                        </svg>
+                        <p>Policies</p>
+                    </li>
+                    <li class="flex gap-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-circle-help">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                            <path d="M12 17h.01"></path>
+                        </svg>
+                        <p>FAQ</p>
+                    </li>
+                    <li class="flex gap-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-briefcase-business">
+                            <path d="M12 12h.01"></path>
+                            <path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"></path>
+                            <path d="M22 13a18.15 18.15 0 0 1-20 0"></path>
+                            <rect width="20" height="14" x="2" y="6" rx="2"></rect>
+                        </svg>
+                        <p>Careers</p>
+                    </li>
+                    <li class="flex gap-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-map">
+                            <path
+                                d="M14.106 5.553a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619v12.764a1 1 0 0 1-.553.894l-4.553 2.277a2 2 0 0 1-1.788 0l-4.212-2.106a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0z">
+                            </path>
+                            <path d="M15 5.764v15"></path>
+                            <path d="M9 3.236v15"></path>
+                        </svg>
+                        <p>Sitemap</p>
+                    </li>
+                    <li class="flex gap-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-inbox">
+                            <polyline points="22 12 16 12 14 15 10 15 8 12 2 12"></polyline>
+                            <path
+                                d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z">
+                            </path>
+                        </svg>
+                        <p>Partner</p>
+                    </li>
+                    <li class="flex gap-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-phone">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                            </path>
+                        </svg>
+                        <p>Contact Us</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Social Media -->
+            <div>
+                <h3 class="text-xl font-semibold mb-4">Social Media</h3>
+                <div class="flex space-x-4">
+                    <a
+                        class="border rounded-full p-2 bg-[#FFFFFF1A] hover:bg-blue-500 hover:scale-110 transition-transform duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-facebook">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                        </svg>
+                    </a>
+                    <a
+                        class="border rounded-full p-2 bg-[#FFFFFF1A] hover:bg-blue-500 hover:scale-110 transition-transform duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-instagram">
+                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+                        </svg>
+                    </a>
+                    <a
+                        class="border rounded-full p-2 bg-[#FFFFFF1A] hover:bg-blue-500 hover:scale-110 transition-transform duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-twitter">
+                            <path
+                                d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z">
+                            </path>
+                        </svg>
+                    </a>
+                    <a
+                        class="border rounded-full p-2 bg-[#FFFFFF1A] hover:bg-blue-500 hover:scale-110 transition-transform duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-linkedin">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                            </path>
+                            <rect width="4" height="12" x="2" y="9"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <!-- Sign up email -->
+            <div>
+                <h3 class="mb-4">Sign Up for Email</h3>
+                <h3 class="text-gray-400 mb-4">Subscribe to our newsletter to receive news on update.</h3>
+                <form class="flex gap-4">
+                    <input type="email" placeholder="Enter Your email" class="px-4 py-2 rounded text-white border" />
+                    <button
+                        class="bg-white hover:bg-blue-700 px-4  rounded text-black font-semibold uppercase hover:text-white py-2">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div
+            class="flex flex-col md:flex-row items-center justify-between border-t border-gray-700 py-4 text-sm text-gray-400">
+            <p>&copy; 2025 Team 02 FPT Aptech Vietnam</p>
+            <div class="flex space-x-4 mt-2 md:mt-0">
+                <img src="./image/visa.svg" alt="Visa" class="h-6" />
+                <img src="./image/mastercard.svg" alt="Mastercard" class="h-6" />
+                <img src="./image/amex.svg" alt="Amex" class="h-6" />
+                <img src="./image/paypal.svg" alt="PayPal" class="h-6" />
+                <img src="./image/diners.svg" alt="Diners" class="h-6" />
+                <img src="./image/discover.svg" alt="Discover" class="h-6" />
+            </div>
+        </div>
+    </div>
+    <!-- Footer Ticker -->
+    <div class=" text-center py-2 space-x-5" style="animation: marqueeScroll 7s linear infinite;">
+        <span>Friday, June 6, 2025 at 00:00:00 AM</span>
+        <span>📍 Location not available</span>
+    </div>
+</footer>
+
+</html>
